@@ -40,3 +40,40 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//nav
+const mainHeader = document.getElementsByTagName('a')[0];
+mainHeader.innerHTML = siteContent["nav"]["nav-item-1"];
+
+
+
+const ctaText = document.getElementsByTagName("h1")[0];
+ctaText.innerHTML = siteContent["cta"]["h1"];
+
+//ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+
+const btn = document.getElementsByTagName("button")[0];
+btn.innerHTML = siteContent["cta"]["button"];
+
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const topContentH4 = document.getElementsByTagName("h4")[0];
+topContentH4.innerHTML = siteContent["main-content"]["features-h4"];
+
+const topContentPara = document.getElementsByTagName("p")[0];
+topContentPara.innerHTML = siteContent["main-content"]["features-content"];
+
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+
+const contactH4 = document.getElementsByClassName("contact")[0];
+contactH4.innerHTML = siteContent["contact"]["contact-h4"];
+
+// const contactPara = document.getElementsByClassName("contact");
+// contactPara.innerHTML = siteContent["contact"]["contact-address"];
