@@ -40,3 +40,86 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//navigation
+const navItems = Array.from(document.getElementsByTagName("a"));
+navItems[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navItems[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navItems[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navItems[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navItems[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navItems[5].innerHTML = siteContent["nav"]["nav-item-6"];
+
+/*
+let selectedNavLinks = document.querySelectorAll("nav a");
+selectedNavLinks.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+})
+*/
+
+//add two items to navigation
+newNavItems = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => { 
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode; 
+}
+newNavItems.prepend(createNewNode("Home"));
+newNavItems.append(createNewNode("Testimonial"));
+
+
+//navigation text color
+navItems.forEach(element => {
+    element.style.color = "green";
+    });
+
+/* selectedNavLinks.forEach((link,i) => {
+  link.style.color = "green";
+})
+*/
+
+//h1 tag
+const ctaText = document.getElementsByTagName("h1")[0];
+ctaText.innerHTML = siteContent["cta"]["h1"];
+
+//button
+const btn = document.getElementsByTagName("button")[0];
+btn.innerHTML = siteContent["cta"]["button"];
+
+//cta image
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+//h4 tags
+const mainContent = Array.from(document.getElementsByTagName('h4'));
+mainContent[0].innerHTML = siteContent["main-content"]["features-h4"];
+mainContent[1].innerHTML = siteContent["main-content"]["about-h4"];
+mainContent[2].innerHTML = siteContent["main-content"]["services-h4"];
+mainContent[3].innerHTML = siteContent["main-content"]["product-h4"];
+mainContent[4].innerHTML = siteContent["main-content"]["vision-h4"];
+
+//p tags
+const textContent = Array.from(document.getElementsByTagName('p'));
+textContent[0].innerHTML = siteContent["main-content"]["features-content"];
+textContent[1].innerHTML = siteContent["main-content"]["about-content"];
+textContent[2].innerHTML = siteContent["main-content"]["services-content"];
+textContent[3].innerHTML = siteContent["main-content"]["product-content"];
+textContent[4].innerHTML = siteContent["main-content"]["vision-content"];
+
+//middle image
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//contact
+const contact = Array.from(document.getElementsByClassName("contact"))[0];
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
+
+
+//footer
+const footer = Array.from(document.getElementsByTagName('footer'))[0];
+footer.innerHTML = siteContent["footer"]["copyright"];
